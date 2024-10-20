@@ -1,3 +1,10 @@
 USE alx_book_store;
 
-SELECT book_id,title,author_id,price,publication_date FROM Books;
+SELECT 
+    COLUMN_NAME, 
+    COLUMN_TYPE
+FROM 
+    INFORMATION_SCHEMA.COLUMNS
+WHERE 
+    TABLE_SCHEMA = 'alx_book_store'
+    AND TABLE_NAME = 'books';
